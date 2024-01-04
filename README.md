@@ -23,23 +23,23 @@ Send SMS messages through the LabsMobile platform and the node library.
 ## Requirements
 
 - A user account with LabsMobile. Click on the link to create an account [here][signUp].
-- This library supports php v16.19.0 and higher versions of php.
+- This library supports node v16.19.0 and higher versions of node.
 
 ## Installation
 
-To install the [labsmobile/sms-php][packages] library, it is recommended to use [composer][getcomposer]. \*
+To install the [labsmobile-sms-node][packages] library, it is recommended to use [npm][getnpm]. \*
 
 ### Installation command
 
 ```
-composer require labsmobile/sms-php *
+npm i labsmobile-sms-node
 ```
 
 ### Installation by modifying the composer.json file
 
 ```
-"require": {
-	"labsmobile/sms-php": "1.0.1" *
+"dependencies": {
+	"labsmobile-sms-node": "1.0.1" *
 }
 ```
 
@@ -207,6 +207,5 @@ If you have questions, you can contact us through the support chat or through th
 
 [apidocs]: https://apidocs.labsmobile.com/
 [signUp]: https://www.labsmobile.com/en/signup
-[packages]: https://packagist.org/packages/labsmobile/sms-php
-[getcomposer]: https://getcomposer.org/
-[getcomposerdownload]: https://getcomposer.org/download/
+[packages]: https://www.npmjs.com/package/labsmobile-sms-node
+[getnpm]: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
