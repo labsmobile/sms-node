@@ -27,7 +27,7 @@ Send SMS messages through the LabsMobile platform and the node library.
 
 ## Installation
 
-To install the [labsmobile-sms-node][packages] library, it is recommended to use [npm][getnpm]. \*
+To install the [labsmobile-sms-node][packages] library, it is recommended to use [npm][getnpm].
 
 ### Installation command
 
@@ -39,7 +39,7 @@ npm i labsmobile-sms-node
 
 ```
 "dependencies": {
-	"labsmobile-sms-node": "1.0.1" *
+	"labsmobile-sms-node": "1.0.1"
 }
 ```
 

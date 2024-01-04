@@ -1,6 +1,6 @@
 {
   "name": "labsmobile-sms-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -21,8 +21,7 @@
   "homepage": "https://github.com/labsmobile/sms-node#readme",
   "devDependencies": {
     "jest": "^29.7.0",
-    "standard": "^17.1.0",
-    "supertest": "^6.3.3"
+    "standard": "^17.1.0"
   },
   "eslintConfig": {
     "extends": "standard",
