@@ -50,10 +50,10 @@ npm i labsmobile-sms-node
 Here is an example of using the library to send a SMS:
 
 ```javascript
-const LabsMobileClient = require("../src/LabsMobileClient");
-const LabsMobileModelTextMessage = require("../src/LabsMobileModelTextMessage");
-const ParametersException = require("../src/Exception/ParametersException");
-const RestException = require("../src/Exception/RestException");
+const LabsMobileClient = require("labsmobile-sms-node/src/LabsMobileClient");
+const LabsMobileModelTextMessage = require("labsmobile-sms-node/src/LabsMobileModelTextMessage");
+const ParametersException = require("labsmobile-sms-node/src/Exception/ParametersException");
+const RestException = require("labsmobile-sms-node/src/Exception/RestException");
 
 async function sendSms() {
   try {
@@ -82,9 +82,9 @@ async function sendSms() {
 Here is an example to learn credits for an existing account:
 
 ```javascript
-const LabsMobileClient = require("../src/LabsMobileClient");
-const ParametersException = require("../src/Exception/ParametersException");
-const RestException = require("../src/Exception/RestException");
+const LabsMobileClient = require("labsmobile-sms-node/src/LabsMobileClient");
+const ParametersException = require("labsmobile-sms-node/src/Exception/ParametersException");
+const RestException = require("labsmobile-sms-node/src/Exception/RestException");
 
 async function getCreditTest() {
   try {
@@ -110,10 +110,10 @@ async function getCreditTest() {
 Here is an example you can cancel or execute the scheduled sendings that are pending for execution:
 
 ```javascript
-const LabsMobileClient = require("../src/LabsMobileClient");
-const LabsMobileModelScheduledSendings = require("../src/LabsMobileModelScheduledSendings");
-const ParametersException = require("../src/Exception/ParametersException");
-const RestException = require("../src/Exception/RestException");
+const LabsMobileClient = require("labsmobile-sms-node/src/LabsMobileClient");
+const LabsMobileModelScheduledSendings = require("labsmobile-sms-node/src/LabsMobileModelScheduledSendings");
+const ParametersException = require("labsmobile-sms-node/src/Exception/ParametersException");
+const RestException = require("labsmobile-sms-node/src/Exception/RestException");
 
 async function scheduledSendingsTest() {
   try {
@@ -144,10 +144,10 @@ async function scheduledSendingsTest() {
 Here is an example to know the credits that a single sending will take depending on the country of delivery:
 
 ```javascript
-const LabsMobileClient = require("../src/LabsMobileClient");
-const LabsMobileModelCountryPrice = require("../src/LabsMobileModelCountryPrice");
-const ParametersException = require("../src/Exception/ParametersException");
-const RestException = require("../src/Exception/RestException");
+const LabsMobileClient = require("labsmobile-sms-node/src/LabsMobileClient");
+const LabsMobileModelCountryPrice = require("labsmobile-sms-node/src/LabsMobileModelCountryPrice");
+const ParametersException = require("labsmobile-sms-node/src/Exception/ParametersException");
+const RestException = require("labsmobile-sms-node/src/Exception/RestException");
 
 async function getpricesCountryTest() {
   try {
@@ -175,10 +175,10 @@ async function getpricesCountryTest() {
 Here is an example queries the mobile phone status with the related information like current operator, format, active, ported information, subscription country, etc:
 
 ```javascript
-const LabsMobileClient = require("../src/LabsMobileClient");
-const LabsMobileModelHlrRequest = require("../src/LabsMobileModelHlrRequest");
-const ParametersException = require("../src/Exception/ParametersException");
-const RestException = require("../src/Exception/RestException");
+const LabsMobileClient = require("labsmobile-sms-node/src/LabsMobileClient");
+const LabsMobileModelHlrRequest = require("labsmobile-sms-node/src/LabsMobileModelHlrRequest");
+const ParametersException = require("labsmobile-sms-node/src/Exception/ParametersException");
+const RestException = require("labsmobile-sms-node/src/Exception/RestException");
 
 async function hlrRequestTest() {
   try {
