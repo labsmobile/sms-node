@@ -27,19 +27,19 @@ Send SMS messages through the LabsMobile platform and the node library.
 
 ## Installation
 
-To install the [labsmobile-sms-node][packages] library, it is recommended to use [npm][getnpm].
+To install the [labsmobile-sms][packages] library, it is recommended to use [npm][getnpm].
 
 ### Installation command
 
 ```
-npm i labsmobile-sms-node
+npm i labsmobile-sms
 ```
 
 ### Installation by modifying the composer.json file
 
 ```
 "dependencies": {
-	"labsmobile-sms-node": "1.0.1"
+	"labsmobile-sms": "1.0.1"
 }
 ```
 
@@ -50,10 +50,10 @@ npm i labsmobile-sms-node
 Here is an example of using the library to send a SMS:
 
 ```javascript
-const LabsMobileClient = require("labsmobile-sms-node/src/LabsMobileClient");
-const LabsMobileModelTextMessage = require("labsmobile-sms-node/src/LabsMobileModelTextMessage");
-const ParametersException = require("labsmobile-sms-node/src/Exception/ParametersException");
-const RestException = require("labsmobile-sms-node/src/Exception/RestException");
+const LabsMobileClient = require("labsmobile-sms/src/LabsMobileClient");
+const LabsMobileModelTextMessage = require("labsmobile-sms/src/LabsMobileModelTextMessage");
+const ParametersException = require("labsmobile-sms/src/Exception/ParametersException");
+const RestException = require("labsmobile-sms/src/Exception/RestException");
 
 async function sendSms() {
   try {
@@ -82,9 +82,9 @@ async function sendSms() {
 Here is an example to learn credits for an existing account:
 
 ```javascript
-const LabsMobileClient = require("labsmobile-sms-node/src/LabsMobileClient");
-const ParametersException = require("labsmobile-sms-node/src/Exception/ParametersException");
-const RestException = require("labsmobile-sms-node/src/Exception/RestException");
+const LabsMobileClient = require("labsmobile-sms/src/LabsMobileClient");
+const ParametersException = require("labsmobile-sms/src/Exception/ParametersException");
+const RestException = require("labsmobile-sms/src/Exception/RestException");
 
 async function getCreditTest() {
   try {
@@ -110,10 +110,10 @@ async function getCreditTest() {
 Here is an example you can cancel or execute the scheduled sendings that are pending for execution:
 
 ```javascript
-const LabsMobileClient = require("labsmobile-sms-node/src/LabsMobileClient");
-const LabsMobileModelScheduledSendings = require("labsmobile-sms-node/src/LabsMobileModelScheduledSendings");
-const ParametersException = require("labsmobile-sms-node/src/Exception/ParametersException");
-const RestException = require("labsmobile-sms-node/src/Exception/RestException");
+const LabsMobileClient = require("labsmobile-sms/src/LabsMobileClient");
+const LabsMobileModelScheduledSendings = require("labsmobile-sms/src/LabsMobileModelScheduledSendings");
+const ParametersException = require("labsmobile-sms/src/Exception/ParametersException");
+const RestException = require("labsmobile-sms/src/Exception/RestException");
 
 async function scheduledSendingsTest() {
   try {
@@ -144,10 +144,10 @@ async function scheduledSendingsTest() {
 Here is an example to know the credits that a single sending will take depending on the country of delivery:
 
 ```javascript
-const LabsMobileClient = require("labsmobile-sms-node/src/LabsMobileClient");
-const LabsMobileModelCountryPrice = require("labsmobile-sms-node/src/LabsMobileModelCountryPrice");
-const ParametersException = require("labsmobile-sms-node/src/Exception/ParametersException");
-const RestException = require("labsmobile-sms-node/src/Exception/RestException");
+const LabsMobileClient = require("labsmobile-sms/src/LabsMobileClient");
+const LabsMobileModelCountryPrice = require("labsmobile-sms/src/LabsMobileModelCountryPrice");
+const ParametersException = require("labsmobile-sms/src/Exception/ParametersException");
+const RestException = require("labsmobile-sms/src/Exception/RestException");
 
 async function getpricesCountryTest() {
   try {
@@ -175,10 +175,10 @@ async function getpricesCountryTest() {
 Here is an example queries the mobile phone status with the related information like current operator, format, active, ported information, subscription country, etc:
 
 ```javascript
-const LabsMobileClient = require("labsmobile-sms-node/src/LabsMobileClient");
-const LabsMobileModelHlrRequest = require("labsmobile-sms-node/src/LabsMobileModelHlrRequest");
-const ParametersException = require("labsmobile-sms-node/src/Exception/ParametersException");
-const RestException = require("labsmobile-sms-node/src/Exception/RestException");
+const LabsMobileClient = require("labsmobile-sms/src/LabsMobileClient");
+const LabsMobileModelHlrRequest = require("labsmobile-sms/src/LabsMobileModelHlrRequest");
+const ParametersException = require("labsmobile-sms/src/Exception/ParametersException");
+const RestException = require("labsmobile-sms/src/Exception/RestException");
 
 async function hlrRequestTest() {
   try {
@@ -207,5 +207,5 @@ If you have questions, you can contact us through the support chat or through th
 
 [apidocs]: https://apidocs.labsmobile.com/
 [signUp]: https://www.labsmobile.com/en/signup
-[packages]: https://www.npmjs.com/package/labsmobile-sms-node
+[packages]: https://www.npmjs.com/package/labsmobile-sms
 [getnpm]: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
