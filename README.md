@@ -4,7 +4,7 @@
 
 # LabsMobile-Node
 
-![](https://img.shields.io/badge/version-1.0.1-blue.svg)
+![](https://img.shields.io/badge/version-2.0.0-blue.svg)
 
 Send SMS messages through the LabsMobile platform and the node library.
 
@@ -39,7 +39,7 @@ npm i labsmobile-sms
 
 ```
 "dependencies": {
-	"labsmobile-sms": "1.0.1"
+	"labsmobile-sms": "2.0.0"
 }
 ```
 
