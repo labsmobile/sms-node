@@ -58,7 +58,6 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
-package-lock.json
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -205,5 +204,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+prueba.js
+.env
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,macos,node

@@ -12,7 +12,7 @@ class LabsMobileClient {
   * @param string  username user username
   */
 
-  constructor (username, token) {
+  constructor(username, token) {
     this._username = username
     this._token = token
     this._urlBase = 'https://api.labsmobile.com'
@@ -39,7 +39,7 @@ class LabsMobileClient {
    *
    * @returns token parameter
    */
-  set token (token) {
+  set token(token) {
     this._token = token
     return token
   }
@@ -49,7 +49,7 @@ class LabsMobileClient {
    *
    * @returns token parameter
    */
-  get token () {
+  get token() {
     return this._token
   }
 
@@ -58,7 +58,7 @@ class LabsMobileClient {
    *
    * @returns username parameter
    */
-  set username (username) {
+  set username(username) {
     this._username = username
     return username
   }
@@ -68,11 +68,11 @@ class LabsMobileClient {
    *
    * @returns username parameter
    */
-  get username () {
+  get username() {
     return this._username
   }
 
-  async sendSms (body) {
+  async sendSms(body) {
     const bodySms = {}
     const logger = this._logger
     logger.info('LabsMobile send SMS: ' + body.toString())
@@ -136,6 +136,7 @@ class LabsMobileClient {
       if (body._parameters !== null && body._parameters !== '') {
         bodySms.parameters = body._parameters
       }
+      bodySms.log = '2'
       const config = {
         method: 'post',
         maxBodyLength: Infinity,
@@ -163,7 +164,7 @@ class LabsMobileClient {
     }
   }
 
-  async getCredit () {
+  async getCredit() {
     const logger = this._logger
     logger.info('LabsMobile get credits SMS')
     try {
@@ -201,7 +202,7 @@ class LabsMobileClient {
     }
   }
 
-  async getpricesCountry (body) {
+  async getpricesCountry(body) {
     const countries = body._country
     const logger = this._logger
     logger.info('LabsMobile get SMS prices by contry' + body.toString())
@@ -243,7 +244,7 @@ class LabsMobileClient {
     }
   }
 
-  async scheduledSendings (body) {
+  async scheduledSendings(body) {
     const subid = body._subid
     const cmd = body._cmd
     const logger = this._logger
@@ -287,7 +288,7 @@ class LabsMobileClient {
     }
   }
 
-  async hlrRequest (body) {
+  async hlrRequest(body) {
     const numbers = body._numbers
     const logger = this._logger
     logger.info('LabsMobile HLR Request' + body.toString())

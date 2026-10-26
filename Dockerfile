@@ -1,17 +1,9 @@
-# Use an official PHP image as a starting point
-FROM node:21.5.0-alpine
-
-# Set the working directory to the root of your project
+ARG NODE_VERSION=24.22.1
+FROM node:${NODE_VERSION}-alpine
 WORKDIR /app
-
-# Copy the composer.json and composer.lock file to the container
-COPY package.json ./
-
-# Install the dependencies
-RUN npm install
-
-# Copy the rest of your application to the container
+COPY package.json package-lock.json ./
+RUN npm ci --no-audit --no-fund
 COPY . .
-
-# Default command to run when container starts
-CMD ["node"]
+RUN chown -R node:node /app
+USER node
+CMD ["npm", "test"]

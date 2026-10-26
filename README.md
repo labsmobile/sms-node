@@ -35,13 +35,68 @@ To install the [labsmobile-sms][packages] library, it is recommended to use [npm
 npm i labsmobile-sms
 ```
 
-### Installation by modifying the composer.json file
+### Installation by modifying the package.json file
 
 ```
 "dependencies": {
 	"labsmobile-sms": "1.0.1"
 }
 ```
+
+## Development and CI
+
+CI tests Node.js 22.23.4, 24.22.1 and 26.12.1, the patched versions from the
+October 2026 Node.js security release. Use a patched runtime in your application
+as well; updating this library does not update the Node.js executable.
+
+```bash
+npm ci
+npm test
+```
+
+Tests mock Axios and logging. They require no credentials and send no SMS.
+The committed package-lock.json keeps CI and Docker dependency installs reproducible.
+GitHub Actions are pinned to full commit hashes.
+SMS requests include `log: '1'` automatically.
+
+Docker defaults to Node.js 24.22.1 and runs tests as a non-root user:
+
+```bash
+docker build --build-arg NODE_VERSION=24.22.1 -t sms-node-test .
+docker run --rm --network none sms-node-test
+```
+
+Use `NODE_VERSION=22.23.4` or `NODE_VERSION=26.12.1` to test the other runtimes.
+
+## Manual integration checks
+
+`prueba.js` calls the real API using credentials from the environment. It is not part
+of Jest or CI. Keep tokens out of source files and Git. The client may write request
+information to `LabsMobile.log`, which is ignored by Git.
+
+```bash
+export LM_USER='your-account-email'
+export LM_TOKEN='your-api-token'
+export LM_PHONE='your-number-with-country-code'
+node prueba.js saldo
+node prueba.js precios
+node prueba.js sms
+```
+
+`sms` uses simulated mode (`test=1`). `sms-real` sends an actual SMS and `hlr` performs
+an actual HLR lookup; both can consume credits. To cancel a pending test sending,
+set `LM_SUBID` and run `node prueba.js cancelar`. Wildcard cancellation is disabled.
+Use `node prueba.js --help` for all options. A nonzero exit code indicates failure.
+
+To use Docker without installing Node.js locally:
+
+```bash
+docker build --build-arg NODE_VERSION=24.22.1 -t sms-node-manual .
+docker run --rm -e LM_USER -e LM_TOKEN -e LM_PHONE -e LM_SUBID -e LM_COUNTRIES -e LM_MESSAGE sms-node-manual node prueba.js saldo
+```
+
+Replace `saldo` with the desired operation. Use `NODE_VERSION=22.23.4` or
+`NODE_VERSION=26.12.1` to use another patched runtime. Rebuild after editing the script.
 
 ## Examples of use cases
 

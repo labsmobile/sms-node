@@ -4,6 +4,16 @@ This file contains the version history and relevant changes for this project.
 
 The project uses the `MAJOR.MINOR.PATCH` versioning scheme.
 
+## [2.0.0] - Unreleased
+
+**Type:** MAJOR
+
+### Changed
+
+- Replace live API tests with mocked endpoint, credential, payload and API error tests.
+- Use Node.js 24.22.1 by default in Docker; keep non-root execution and run tests by default.
+- Commit the npm lockfile and use npm ci for reproducible CI and Docker installs.
+
 ## [1.0.1] - 2024-01-04
 
 **Type:** MAJOR
